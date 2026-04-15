@@ -11,28 +11,35 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Table
-public class Jugador{
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "jugadores")
+public class Jugador {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer idJugador; 
+
+    @NotBlank
     private String nombre;
+
+    @NotNull
     private int edad;
+
+    @NotNull
     private int goles;
+
+    @NotNull   
     private int asistencias;
+
+    @NotBlank
     private String nacionalidad;
-    private String ClubActual;
+
+    @NotBlank
+    private String clubActual; 
+    
+    @NotNull
     private int numero;
-}
-
-public class Seleccion{
-    private String nombre;
-    private String codigoFifa;
-    private String confederacion;
-    private int RankinFifa;
-}
-
-public class GruposSelecciones{
-    private String nombreGrupo;
-    private String selecciones;
-    private int cantidadpartidos;
-    private int 
 }
