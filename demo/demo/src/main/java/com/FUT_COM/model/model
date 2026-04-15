@@ -7,11 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Entity
 @Table
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -42,4 +38,8 @@ public class Jugador {
     
     @NotNull
     private int numero;
+
+    @NotNull
+    private int partidos_jugados;
+
 }
